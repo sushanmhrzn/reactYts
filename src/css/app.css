@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* .navbar{
+    list-style: none;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: center; 
+} */
+ul{
+    background-color: black;
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    float: left;
+  }
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main-box{
+    width: 100%;
+    max-height: auto;
+    /* background-image: url('../assests/cinema.jpeg'); */
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  
+    /* display: inline-block; */
+} 
+.detail-box{
+    max-width: 100%;
+    height: 100vh;
+    /* background-image: url('../assests/cinema.jpeg'); */
+    background-color: black;
+    color: white;
+    /* padding:20px 20px; */
+    text-align: center;
+    display: block;
+} 
+.detail-custom-box{
+    background-color: white;
+    max-width: 1500px;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+}
+.custom-box{
+    max-width: 1500px;
+    height: auto;
+    /* background-color: blue; */
+    /* margin: 40px; */
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 100px;
+    background-color: rgba(255,255,255,0.4);
+}
+.content-box{ 
+    margin-top: 100px;
+    vertical-align: top;
+    width:  290px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.4);
+    display: inline-block;
+    border-radius: 10px;
+    margin: 50px 30px;
+    /* color: white; */
+}
+img{
+    
+    bottom: 40px;
+    border-radius: 10px;
+    display: inline-block;
+    height: auto;
+    width: 290px;
+    /* display: inline-block; */
+}
+p{
+ font-weight: 1000;
+ position: relative;
+ margin-top: -8px;
+ color: rgb(34, 211, 18);
+}
+.btn{
+    position: relative;
+    bottom:250px;
+    margin-left: 34%;
+    border-radius: 10px;
+    background-color: grey;
+    /* width: 150px;
+    height: 50px; */
+    width:100px;
+    opacity: 0;
+   /* bottom: 100px; */
+}
+.content-box:hover img{
+    filter:blur(2px);
+}
+.content-box:hover .btn{
+    opacity: 0.8;
+}
+a{
+    display: block;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    text-align: center;
+    /* text-align: center; */
+    /* padding: 14px 16px; */
+    text-decoration: none; 
+}
