@@ -1,9 +1,10 @@
 import React from 'react'
 import '../css/app.css'
-import HomePage from '../Pages/HomePage'
 import {Link} from 'react-router-dom';
+import HomePage from '../Pages/HomePage';
 
-const Navbar = () => {
+
+const Navbar = (props) => {
   return (
     <div className='navbar'>
       <ul>

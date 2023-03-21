@@ -7,6 +7,7 @@ import Details from './Pages/Details';
 import Login from './Pages/Login';
 import {BrowserRouter as Router,createBrowserRouter,Outlet,Route, RouterProvider} from 'react-router-dom';
 import Signup from './Pages/Signup';
+import { useContext, useState } from 'react';
 
 function App() {
   return (
@@ -14,16 +15,17 @@ function App() {
   );
 }
 const Layout=()=>{
-  // <>
-  // <Navbar/>
-  // <Outlet/>
-  // <Footer/>
-  // </>r
+  const [value,setValue]=useState('');
+  function handleValueChange(value){
+    setValue(value);
+  }
+
   return(
     <>
-    <Navbar/>
-    <Outlet/>
-    <Footer/>
+    <Navbar onValueChange={handleValueChange}/>
+    {console.log(value)}
+    <Outlet context={value}/>
+    {/* <Footer/> */}
     </>
   )
 }
@@ -38,7 +40,7 @@ const route=createBrowserRouter([
         element:<HomePage/>
       },
       {
-        path:'details',
+        path:'details/:id',
         element:<Details/>
       }
     ]
