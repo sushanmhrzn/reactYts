@@ -1,26 +1,29 @@
 import React,{useEffect, useState} from 'react'
 import '../css/app.css';
-import {Link} from 'react-router-dom';
+import {Link, useFetcher} from 'react-router-dom';
 import Navbar from '../component/Navbar';
 
 const HomePage =() => {
   const [movies,setMovies]=useState([]);
+  const [fmovies,setFilteredMovies]=useState([]);
   const [value,setValue]=useState('');
 
+  console.log(value);
   //Run when variable named value is changed
   useEffect(()=>{
-      if(value===""){
-        getAndSetApi();
-      }
-      setFilterMovies();
+      // if(value===""){
+        if(value===''){
+          getAndSetApi();
+        }else{
+          setFilterMovies();
+        }
   },[value])
   
-  //called from useEffect() function which filters the movies according to the value set handleChange function
   function setFilterMovies(){
     const results=movies.filter(movie =>{
       return movie.title.includes(value);
     })
-    setMovies(results);
+    setFilteredMovies(results);
   }
 
   //Function is called when we change something in the input tag
@@ -28,14 +31,18 @@ const HomePage =() => {
     setValue(e.target.value);
  }
 
+
  //Used for fetching the api
   async function getAndSetApi(){
-    
       await fetch("https://yts.mx/api/v2/list_movies.json")
       .then(res => res.json())
-      .then(data => setMovies(data.data.movies))
+      .then(data =>{ 
+        setMovies(data.data.movies) 
+        setFilteredMovies(data.data.movies)
+      })
       .catch(error=>console.log(error));
-  }
+      // console.log("From getsetApi function")
+    }
 
     return(
      <div className='main-box'>
@@ -43,7 +50,7 @@ const HomePage =() => {
           <div className='header'>
             <div className='movie-type'>Movies</div><input type='text' placeholder='Search...' onChange={handleChange}/>
             </div>
-            {movies.map(({title,large_cover_image,id})=>( //Using the object destructuring in map function
+            {fmovies.map(({title,large_cover_image,id})=>( //Using the object destructuring in map function
               <div className='content-box' key={id}>
               <img  src={large_cover_image} alt={title}/>
               <p >{title}</p>
