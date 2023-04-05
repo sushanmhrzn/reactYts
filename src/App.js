@@ -18,12 +18,12 @@ const Layout=()=>{
   const [value,setValue]=useState('');
   function handleValueChange(value){
     setValue(value);
+    console.log('layout search',value);
   }
 
   return(
     <>
     <Navbar onValueChange={handleValueChange}/>
-    {console.log(value)}
     <Outlet context={value}/>
     {/* <Footer/> */}
     </>
@@ -37,7 +37,7 @@ const route=createBrowserRouter([
     children:[
       {
         path:'',
-        element:<HomePage/>
+        element:<HomePage />
       },
       {
         path:'details/:id',

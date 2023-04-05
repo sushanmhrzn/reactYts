@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@100&family=Raleway:wght@100&family=Updock&display=swap');
+@import url('https://.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@100&family=Raleway:wght@100&family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Flavors&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@100&family=Raleway:wght@100&family=Roboto:wght@900&family=Updock&display=swap');
+body{
+    box-sizing: border-box;  
+    background-color: #f6f6f6;
+    background-image: linear-gradient(315deg, #7b7878 0%, #f7f7f7 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.login.login-box{
+ display: flex;
+ justify-content: space-between;
+ height: 700px;
+ border :10px;
+ margin-top:50px;
+ width: 1200px;
+ background-color: white;
+ overflow: hidden;
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login__image{
+    height:700px;
+    width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  
+}
+.login-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.login-container__logo{
+    font-family: 'Flavors', cursive;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin:40px;
+}
+.login-container__logo__image{
+    height:50px;
+    width:60px;
+    /* margin: 10px; */
+}
+.login-container__items{
+    margin-left:100px;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.login-container__items__title1{
+    font-family: 'Updock', cursive;
+    font-size: 40px;
+    font-weight:1000;
+    text-align: center;
+}
+.login-container__items__title2{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: grey;
+}
+.login_container__items__inputField__title{
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.login-container__items__inputField{
+    margin:0;
+    height: 49px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    text-align:left;
+}
+.login-container__items__checkbox{
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.icon{
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+}
+.remeber_checkBox{
+    margin: 0;
+    position: relative;
+    top: 3.5px;
+    margin-right: 5px;
+}
+.login-container__items__signup{
+    margin-top: 20px;
+    font-size: 15px;
+    height:30px;
+    text-align: center;
+    color: grey;
+}
+a{
+    display: inline-block;
+    font-size: 15px;
+    color: black;
+    font-weight: 700;
+}
+.forget_password{
+    cursor: pointer;
+    display: inline-block;
+    margin-left:140px;
+}
+.btn{
+    margin-bottom:20px ;
+    margin-left:0;
+    height: 52px;
+    font-size: 20px;
+}
+.btn-login{
+    color: white;
+    background-color: black;
+}
+.btn__logingoogle{
+    color: black;
+    border:1px solid rgb(186, 186, 186);
+}
